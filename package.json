@@ -1,0 +1,44 @@
+{
+  "name": "egg-bull-queue",
+  "version": "1.0.0",
+  "description": "Bull queue plugin for Egg.js.",
+  "eggPlugin": {
+    "name": "bull"
+  },
+  "keywords": ["egg", "eggPlugin", "egg-plugin"],
+  "dependencies": {
+    "bull": "^3.3.10"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.3.10",
+    "egg": "^2.0.0",
+    "egg-bin": "^4.3.0",
+    "egg-mock": "^3.13.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": ["config", "app.js", "lib"],
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brickyang/egg-bull.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brickyang/egg-bull/issues"
+  },
+  "homepage": "https://github.com/brickyang/egg-bull#readme",
+  "author": "brick <brick.c.yang@gmail.com>",
+  "license": "MIT"
+}
