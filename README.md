@@ -30,6 +30,14 @@ Bull is a fast, reliable, Redis-based queue for Node.
 $ npm i egg-bull-queue --save
 ```
 
+For TypeScript users:
+
+```bash
+$ npm i @types/bull --save-dev
+```
+
+
+
 ## Usage
 
 ```js

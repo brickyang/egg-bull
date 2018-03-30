@@ -28,6 +28,14 @@
 $ npm i egg-bull-queue --save
 ```
 
+TypeScript 类型声明文件：
+
+```bash
+$ npm i @types/bull --save-dev
+```
+
+
+
 ## 使用
 
 ```js
