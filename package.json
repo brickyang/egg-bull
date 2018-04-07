@@ -7,10 +7,10 @@
   },
   "keywords": ["egg", "eggPlugin", "egg-plugin"],
   "dependencies": {
+    "@types/bull": "^3.3.10",
     "bull": "^3.3.10"
   },
   "devDependencies": {
-    "@types/bull": "^3.3.10",
     "egg": "^2.0.0",
     "egg-bin": "^4.3.0",
     "egg-mock": "^3.13.0",
