@@ -42,9 +42,9 @@ $ npm i @types/bull --save-dev
 
 ```js
 // {app_root}/config/plugin.js
-exports.bull = {
+exports.bull = { // plugin name is 'bull'
   enable: true,
-  package: 'egg-bull', // notice the name of plugin
+  package: 'egg-bull-queue', // package name is 'egg-bull-queue'
 };
 ```
 
