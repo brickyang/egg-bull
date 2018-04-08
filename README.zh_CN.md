@@ -28,19 +28,12 @@
 $ npm i egg-bull-queue --save
 ```
 
-TypeScript 类型声明文件：
-
-```bash
-$ npm i @types/bull --save-dev
-```
-
-
-
 ## 使用
 
 ```js
 // {app_root}/config/plugin.js
-exports.bull = {  // 插件名称是 'bull'
+exports.bull = {
+  // 插件名称是 'bull'
   enable: true,
   package: 'egg-bull-queue', // 包名称是 'egg-bull-queue'
 };
