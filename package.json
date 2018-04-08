@@ -1,6 +1,6 @@
 {
   "name": "egg-bull-queue",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Bull queue plugin for Egg.js.",
   "eggPlugin": {
     "name": "bull"
