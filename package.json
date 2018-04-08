@@ -1,11 +1,15 @@
 {
   "name": "egg-bull-queue",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Bull queue plugin for Egg.js.",
   "eggPlugin": {
     "name": "bull"
   },
-  "keywords": ["egg", "eggPlugin", "egg-plugin"],
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
   "dependencies": {
     "@types/bull": "^3.3.10",
     "bull": "^3.3.10"
@@ -27,7 +31,12 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov"
   },
-  "files": ["config", "lib", "app.js", "index.d.ts"],
+  "files": [
+    "config",
+    "lib",
+    "app.js",
+    "index.d.ts"
+  ],
   "ci": {
     "version": "8, 9"
   },
