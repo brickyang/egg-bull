@@ -1,14 +1,18 @@
-import * as Bull from 'bull';
+import { Queue, QueueOptions } from 'bull';
 
-export { Queue, Job } from 'bull';
-
-interface IBullConfig extends Bull.QueueOptions {
+interface IBullConfig extends QueueOptions {
   name?: string;
+}
+
+declare namespace Bull {
+  interface Queues {
+    get: (key: string) => Queue;
+  }
 }
 
 declare module 'egg' {
   interface Application {
-    bull: Bull.Queue;
+    bull: Queue | Bull.Queues;
   }
 
   interface EggAppConfig {
@@ -21,3 +25,5 @@ declare module 'egg' {
     };
   }
 }
+
+export = Bull;
