@@ -40,9 +40,9 @@ $ npm i @types/bull --save-dev
 
 ```js
 // {app_root}/config/plugin.js
-exports.bull = {
+exports.bull = {  // 插件名称是 'bull'
   enable: true,
-  package: 'egg-bull', // 注意插件名称
+  package: 'egg-bull-queue', // 包名称是 'egg-bull-queue'
 };
 ```
 
