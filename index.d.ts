@@ -1,18 +1,41 @@
 import { Queue, QueueOptions } from 'bull';
 
+export {
+  RateLimiter,
+  QueueOptions,
+  AdvancedSettings,
+  DoneCallback,
+  JobId,
+  Job,
+  JobStatus,
+  BackoffOptions,
+  RepeatOptions,
+  JobOptions,
+  JobCounts,
+  JobInformation,
+  Queue,
+  EventCallback,
+  ErrorEventCallback,
+  JobPromise,
+  ActiveEventCallback,
+  StalledEventCallback,
+  ProgressEventCallback,
+  CompletedEventCallback,
+  FailedEventCallback,
+  CleanedEventCallback,
+} from 'bull';
+
 interface IBullConfig extends QueueOptions {
   name?: string;
 }
 
-declare namespace Bull {
-  interface Queues {
-    get: (key: string) => Queue;
-  }
+export interface Queues {
+  get: (key: string) => Queue;
 }
 
 declare module 'egg' {
   interface Application {
-    bull: Queue | Bull.Queues;
+    bull: Queue | Queues;
   }
 
   interface EggAppConfig {
@@ -25,5 +48,3 @@ declare module 'egg' {
     };
   }
 }
-
-export = Bull;
