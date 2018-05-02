@@ -1,13 +1,16 @@
 sudo: false
 language: node_js
 node_js:
-  - '8'
-  - '9'
+- '8'
+- '9'
 install:
-  - npm i npminstall && npminstall
+- npm i npminstall && npminstall
 services:
-  - redis-server
+- redis-server
 script:
-  - npm run ci
+- npm run ci
 after_script:
-  - npminstall codecov && codecov
+- npminstall codecov && codecov
+notifications:
+  slack:
+    secure: CQN9GGGADP5pOAFeKFgyPdzjtkDwffS4RDfAznb2EhgzptL58QTuwSoxOC4CMrkZ6Rxw7c4ud1n5U38wCvigdQNLhqFcciiJt1qaH/uGbzPktkqVF1N465K7FH1Qm4m8vm4AzwokeX7uzcfblq6Aw3bRISKRPz1DIfpAlbxiYwBw8XcalITmTkkGRrTD3uISYJhXrvhlr1cjFhCcPC1hNKWQVJIs2jGe5CoT3MMcWgN1n4fHhlhXZHC1BPN1ijHEk1xanz4fwYp0LE8kuXGwuWPTzeCtvRuvJTjUfAHN/df6DVztuE3V9f4xJaYCgihfuiGvkDSDw6PYj6OBlcx2gKeiobsxlLF5HkmqZ3iAf4Ps3+b+02ombc5ZZJeonlDqupLr+gpHVqw5z0M77Lanijr0/hAfKZbaGGye0kzz8sP5HgWhfuImrFmIF3JMIVP6jIklB3ZqVbYICqWWcxHdgqIEeHWKYsr0wjdQDG1OyjMPtueePyjJ5l02jTZSM5geAV7TrO4hPjy1QSu3Hp3OdYXm+OPb4IutvhxPTii38WHCgLgPLaP7zg19eRUyv4TVNldaBxgqVhrrkN33kX6OjkahqhBcIagSet4g4eB2tptqqEDxigSF/HLJWoUNqVtw4xN8LnT9cwJwyBl2f8Ga+3x0ZnaS4vtoKk6iwDuMhgg=
