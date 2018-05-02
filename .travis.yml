@@ -1,15 +1,15 @@
 sudo: false
 language: node_js
 node_js:
-  - '8'
-  - '9'
+- '8'
+- '9'
 install:
-  - npm i npminstall && npminstall
+- npm i npminstall && npminstall
 services:
-  - redis-server
+- redis-server
 script:
-  - npm run ci
+- npm run ci
 after_script:
-  - npminstall codecov && codecov
+- npminstall codecov && codecov
 notifications:
-    slack: $SLACK_WORKSPACE:$SLACK_TOKEN
+  slack: SLACK_WORKSPACE:SLACK_TOKEN
