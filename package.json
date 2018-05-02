@@ -5,11 +5,7 @@
   "eggPlugin": {
     "name": "bull"
   },
-  "keywords": [
-    "egg",
-    "eggPlugin",
-    "egg-plugin"
-  ],
+  "keywords": ["egg", "eggPlugin", "egg-plugin"],
   "dependencies": {
     "@types/bull": "^3.3.10",
     "bull": "^3.3.10"
@@ -25,18 +21,13 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov"
   },
-  "files": [
-    "config",
-    "lib",
-    "app.js",
-    "index.d.ts"
-  ],
+  "files": ["config", "lib", "app.js", "index.d.ts"],
   "ci": {
     "version": "8, 9"
   },
