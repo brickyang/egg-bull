@@ -5,10 +5,15 @@
   "eggPlugin": {
     "name": "bull"
   },
-  "keywords": ["egg", "eggPlugin", "egg-plugin"],
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
   "dependencies": {
     "@types/bull": "^3.4.1",
-    "bull": "^3.5.2"
+    "bull": "^3.5.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "egg": "^2.0.0",
@@ -25,9 +30,16 @@
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov"
+    "ci": "npm run lint && npm run cov",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "files": ["config", "lib", "app.js", "index.d.ts"],
+  "files": [
+    "config",
+    "lib",
+    "app.js",
+    "index.d.ts"
+  ],
   "ci": {
     "version": "8, 9"
   },
@@ -40,5 +52,6 @@
   },
   "homepage": "https://github.com/brickyang/egg-bull#readme",
   "author": "brick <brick.c.yang@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
